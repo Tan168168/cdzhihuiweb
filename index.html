@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智会科技 - 引领未来科技解决方案</title>
+    <meta name="description" content="智会科技专注于人工智能、大数据分析和云计算领域的创新解决方案，助力企业数字化转型。">
+    <meta name="keywords" content="智会科技,人工智能,大数据,云计算,数字化转型">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/starfield-fixed.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/responsive.js" defer></script>
+</head>
+<body>
+    <!-- 星空背景画布 -->
+    <canvas id="starfield"></canvas>
+
+    <!-- 导航栏 -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <span class="logo-text">智会科技</span>
+                </a>
+            </div>
+            
+            <!-- 桌面导航 -->
+            <ul class="nav-links desktop-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="services.html">服务与解决方案</a></li>
+                <li><a href="products.html">产品中心</a></li>
+                <li><a href="case-studies.html">案例展示</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+
+            <!-- 移动端导航触发器 -->
+            <div class="mobile-nav-trigger">
+                <span class="menu-icon"></span>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <ul class="nav-links mobile-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="services.html">服务与解决方案</a></li>
+            <li><a href="products.html">产品中心</a></li>
+            <li><a href="case-studies.html">案例展示</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>引领<span class="highlight">智能科技</span>未来</h1>
+                <p>智会科技专注于为企业提供创新的人工智能、大数据分析和云计算解决方案，助力企业数字化转型，开启智能未来。</p>
+                <div class="cta-buttons">
+                    <a href="services.html" class="btn primary-btn">探索解决方案</a>
+                    <a href="contact.html" class="btn secondary-btn">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 首页特色内容 -->
+    <section class="home-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么选择<span class="highlight">智会科技</span></h2>
+                <p>我们的核心优势</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>技术创新</h3>
+                    <p>持续研发前沿技术，拥有多项核心专利，保持行业领先水平</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path>
+                        </svg>
+                    </div>
+                    <h3>专业团队</h3>
+                    <p>汇聚行业精英，平均拥有8年以上相关领域经验</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>客户至上</h3>
+                    <p>95%的客户满意度，提供7×24小时技术支持服务</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>定制方案</h3>
+                    <p>根据企业实际需求，提供个性化解决方案</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 首页数据统计 -->
+    <section class="home-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">企业客户</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">技术专家</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">行业解决方案</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">客户满意度</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 首页CTA区域 -->
+    <section class="home-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>开启数字化转型之旅</h2>
+                <p>联系我们，了解如何通过智能科技赋能您的业务</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn primary-btn">立即咨询</a>
+                    <a href="services.html" class="btn secondary-btn">了解服务</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#">
+                        <span class="logo-text">智会科技</span>
+                    </a>
+                    <p>引领智能科技，创造无限可能</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html">服务与解决方案</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                    <li><a href="case-studies.html">案例展示</a></li>
+                </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>北京市海淀区中关村科技园区</li>
+                        <li>400-888-8888</li>
+                        <li>info@zhihuikeji.com</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 智会科技. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- CMS数据加载脚本 -->
+    <script src="js/cms-data.js"></script>
+    <script src="js/cms-loader.js" defer></script>
+</body>
+</html>

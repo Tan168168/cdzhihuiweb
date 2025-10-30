@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS管理后台 - 智会科技</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+    <!-- 顶部导航 -->
+    <nav class="admin-nav">
+        <div class="admin-nav-container">
+            <div class="admin-logo">
+                <h1>💼 智会科技 CMS</h1>
+            </div>
+            <div class="admin-actions">
+                <button id="save-all-btn" class="btn primary-btn">💾 保存所有更改</button>
+                <button id="preview-btn" class="btn secondary-btn">👁️ 预览网站</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <!-- 侧边栏 -->
+        <aside class="admin-sidebar">
+            <ul class="admin-menu">
+                <li class="admin-menu-item active" data-section="home">
+                    <span class="menu-icon">🏠</span>
+                    <span class="menu-text">首页内容</span>
+                </li>
+                <li class="admin-menu-item" data-section="about">
+                    <span class="menu-icon">ℹ️</span>
+                    <span class="menu-text">关于我们</span>
+                </li>
+                <li class="admin-menu-item" data-section="services">
+                    <span class="menu-icon">⚙️</span>
+                    <span class="menu-text">服务方案</span>
+                </li>
+                <li class="admin-menu-item" data-section="products">
+                    <span class="menu-icon">📦</span>
+                    <span class="menu-text">产品中心</span>
+                </li>
+                <li class="admin-menu-item" data-section="cases">
+                    <span class="menu-icon">📊</span>
+                    <span class="menu-text">案例展示</span>
+                </li>
+                <li class="admin-menu-item" data-section="contact">
+                    <span class="menu-icon">📞</span>
+                    <span class="menu-text">联系方式</span>
+                </li>
+                <li class="admin-menu-item" data-section="settings">
+                    <span class="menu-icon">⚙️</span>
+                    <span class="menu-text">站点设置</span>
+                </li>
+                <li class="admin-menu-item" data-section="media">
+                    <span class="menu-icon">🖼️</span>
+                    <span class="menu-text">媒体管理</span>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="admin-main">
+            <div class="admin-content">
+                
+                <!-- ========== 首页内容管理 ========== -->
+                <section id="section-home" class="admin-section active">
+                    <h2 class="section-title">📝 首页内容管理</h2>
+                    
+                    <!-- 英雄区域 -->
+                    <div class="content-card">
+                        <h3 class="card-title">🎯 英雄区域</h3>
+                        <div class="form-group">
+                            <label>主标题</label>
+                            <input type="text" id="hero-title" class="form-control">
+                            <small class="form-hint">支持HTML标签，使用 &lt;span class="highlight"&gt; 来高亮文字</small>
+                        </div>
+                        <div class="form-group">
+                            <label>副标题</label>
+                            <textarea id="hero-subtitle" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>主按钮文字</label>
+                                <input type="text" id="hero-cta-primary" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>次按钮文字</label>
+                                <input type="text" id="hero-cta-secondary" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 核心优势 -->
+                    <div class="content-card">
+                        <h3 class="card-title">⭐ 核心优势</h3>
+                        <div class="form-group">
+                            <label>区域标题</label>
+                            <input type="text" id="features-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>区域副标题</label>
+                            <input type="text" id="features-subtitle" class="form-control">
+                        </div>
+                        <div id="features-list"></div>
+                        <button class="btn secondary-btn add-item-btn" onclick="Admin.addItem('features-list', 'feature')">
+                            ➕ 添加优势
+                        </button>
+                    </div>
+
+                    <!-- 数据统计 -->
+                    <div class="content-card">
+                        <h3 class="card-title">📊 数据统计</h3>
+                        <div class="stats-grid">
+                            <div class="form-group">
+                                <label>企业客户数</label>
+                                <input type="text" id="stat-clients" class="form-control" placeholder="500+">
+                            </div>
+                            <div class="form-group">
+                                <label>技术专家数</label>
+                                <input type="text" id="stat-experts" class="form-control" placeholder="100+">
+                            </div>
+                            <div class="form-group">
+                                <label>行业解决方案</label>
+                                <input type="text" id="stat-solutions" class="form-control" placeholder="10+">
+                            </div>
+                            <div class="form-group">
+                                <label>客户满意度</label>
+                                <input type="text" id="stat-satisfaction" class="form-control" placeholder="95%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA区域 -->
+                    <div class="content-card">
+                        <h3 class="card-title">📣 行动号召区域</h3>
+                        <div class="form-group">
+                            <label>标题</label>
+                            <input type="text" id="cta-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>描述</label>
+                            <textarea id="cta-description" class="form-control" rows="2"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== 关于我们管理 ========== -->
+                <section id="section-about" class="admin-section">
+                    <h2 class="section-title">📄 关于我们内容管理</h2>
+                    
+                    <!-- Hero横幅 -->
+                    <div class="content-card">
+                        <h3 class="card-title">🎯 页面横幅</h3>
+                        <div class="form-group">
+                            <label>主标题</label>
+                            <input type="text" id="about-hero-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>副标题</label>
+                            <input type="text" id="about-hero-subtitle" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- 公司简介 -->
+                    <div class="content-card">
+                        <h3 class="card-title">🏢 公司简介</h3>
+                        <div class="form-group">
+                            <label>大标题</label>
+                            <input type="text" id="about-intro-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>第一段（重点内容）</label>
+                            <textarea id="about-intro-large" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>第二段（详细描述）</label>
+                            <textarea id="about-intro-detail" class="form-control" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 核心价值观 -->
+                    <div class="content-card">
+                        <h3 class="card-title">💎 核心价值观</h3>
+                        <div class="form-group">
+                            <label>区域标题</label>
+                            <input type="text" id="about-values-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>区域副标题</label>
+                            <input type="text" id="about-values-subtitle" class="form-control">
+                        </div>
+                        <div id="values-list"></div>
+                        <button class="btn secondary-btn add-item-btn" onclick="Admin.addItem('values-list', 'value')">
+                            ➕ 添加价值观
+                        </button>
+                    </div>
+
+                    <!-- 企业优势 -->
+                    <div class="content-card">
+                        <h3 class="card-title">🏆 企业优势</h3>
+                        <div class="form-group">
+                            <label>区域标题</label>
+                            <input type="text" id="about-advantages-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>区域副标题</label>
+                            <input type="text" id="about-advantages-subtitle" class="form-control">
+                        </div>
+                        <div id="advantages-list"></div>
+                        <button class="btn secondary-btn add-item-btn" onclick="Admin.addItem('advantages-list', 'advantage')">
+                            ➕ 添加优势
+                        </button>
+                    </div>
+
+                    <!-- 联系CTA -->
+                    <div class="content-card">
+                        <h3 class="card-title">📣 联系行动号召</h3>
+                        <div class="form-group">
+                            <label>标题</label>
+                            <input type="text" id="about-cta-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>描述</label>
+                            <textarea id="about-cta-description" class="form-control" rows="2"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== 服务与解决方案 ========== -->
+                <section id="section-services" class="admin-section">
+                    <h2 class="section-title">⚙️ 服务与解决方案管理</h2>
+                    <div class="content-card">
+                        <h3 class="card-title">📋 页面基本信息</h3>
+                        <div class="form-group">
+                            <label>页面标题</label>
+                            <input type="text" id="services-title" class="form-control">
+                            <small class="form-hint">支持HTML标签，使用 &lt;span class="highlight"&gt; 来高亮文字</small>
+                        </div>
+                        <div class="form-group">
+                            <label>页面副标题</label>
+                            <input type="text" id="services-subtitle" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3 class="card-title">🛠️ 服务列表管理</h3>
+                        <p style="color: #94a3b8; margin-bottom: 20px;">
+                            💡 提示：服务项目支持分类、图片、特性标签等字段，与产品中心保持一致的展示风格。
+                        </p>
+                        <div id="services-list"></div>
+                        <button class="btn secondary-btn add-item-btn" onclick="Admin.addItem('services-list', 'service')">
+                            ➕ 添加服务
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ========== 产品中心 ========== -->
+                <section id="section-products" class="admin-section">
+                    <h2 class="section-title">📦 产品中心管理</h2>
+                    <div class="content-card">
+                        <div class="form-group">
+                            <label>页面标题</label>
+                            <input type="text" id="products-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>页面副标题</label>
+                            <input type="text" id="products-subtitle" class="form-control">
+                        </div>
+                        <div id="products-list"></div>
+                        <button class="btn secondary-btn add-item-btn" onclick="Admin.addItem('products-list', 'product')">
+                            ➕ 添加产品
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ========== 案例展示 ========== -->
+                <section id="section-cases" class="admin-section">
+                    <h2 class="section-title">📊 案例展示管理</h2>
+                    <div class="content-card">
+                        <div class="form-group">
+                            <label>页面标题</label>
+                            <input type="text" id="cases-title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>页面副标题</label>
+                            <input type="text" id="cases-subtitle" class="form-control">
+                        </div>
+                        <div id="cases-list"></div>
+                        <button class="btn secondary-btn add-item-btn" onclick="Admin.addItem('cases-list', 'case')">
+                            ➕ 添加案例
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ========== 联系我们 ========== -->
+                <section id="section-contact" class="admin-section">
+                    <h2 class="section-title">📞 联系我们管理</h2>
+                    <div class="content-card">
+                        <h3 class="card-title">📍 联系信息</h3>
+                        <div class="form-group">
+                            <label>地址</label>
+                            <input type="text" id="contact-address" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>电话</label>
+                            <input type="text" id="contact-phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>邮箱</label>
+                            <input type="email" id="contact-email" class="form-control">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== 站点设置 ========== -->
+                <section id="section-settings" class="admin-section">
+                    <h2 class="section-title">⚙️ 站点设置</h2>
+                    <div class="content-card">
+                        <h3 class="card-title">🌐 网站基本信息</h3>
+                        <div class="form-group">
+                            <label>网站名称</label>
+                            <input type="text" id="site-name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>网站标语</label>
+                            <input type="text" id="site-tagline" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>版权信息</label>
+                            <input type="text" id="site-copyright" class="form-control">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== 媒体管理 ========== -->
+                <section id="section-media" class="admin-section">
+                    <h2 class="section-title">🖼️ 媒体管理</h2>
+                    <div class="content-card">
+                        <h3 class="card-title">📁 图片上传</h3>
+                        <div class="upload-area" id="upload-area">
+                            <input type="file" id="file-input" accept="image/*" multiple style="display: none;">
+                            <div class="upload-placeholder">
+                                <span class="upload-icon">📁</span>
+                                <p>点击上传图片或拖拽图片到此处</p>
+                                <small>支持 JPG, PNG, GIF, SVG 格式（单个文件最大2MB）</small>
+                            </div>
+                        </div>
+                        <div id="media-gallery" class="media-gallery"></div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="toast" class="toast"></div>
+
+    <!-- 加载脚本 -->
+    <script src="js/cms-data.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
+
+
